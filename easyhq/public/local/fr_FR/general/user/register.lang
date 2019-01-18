@@ -1,0 +1,16 @@
+######################
+# register.lang (FR) #
+######################
+
+user.register.form.nickname=Votre pseudo :
+user.register.form.nickname.placeholder=Votre pseudo ...
+
+user.register.form.password=Votre mot de passe :
+user.register.form.password.placeholder=Votre mot de passe ...
+
+user.register.form.password.confirm=Confirmez votre mot de passe :
+user.register.form.password.confirm.placeholder=Confirmez votre mot de passe ...
+
+user.register.form.email=Votre adresse mail (abc.xyz@domaine.tld) :
+user.register.form.email.placeholder=Votre adresse mail ...
+user.register.form.submit=S'inscrire

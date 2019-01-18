@@ -1,0 +1,38 @@
+<?php
+
+use PHQ\Database\Dsn;
+use PHQ\Database\IConnection;
+use PHQ\Database\IStatement;
+use PHQ\Database\PDO\Connection;
+use PHQ\Database\PDO\Statement;
+
+return [
+    // DSN Value
+    'db.type'       => DI\env('DB_TYPE',    'mysql'),
+    'db.host'       => DI\env('DB_HOST',    'localhost'),
+    'db.name'       => DI\env('DB_NAME',    'phpfw'),
+    'db.port'       => DI\env('DB_PORT',    3306),
+    'db.charset'    => DI\env('DB_CHARSET', 'utf8'),
+
+    // DSN generate
+    Dsn::class => DI\object(Dsn::class)
+        ->constructor(
+            DI\get('db.type'),
+            DI\get('db.host'),
+            DI\get('db.name'),
+            DI\get('db.port'),
+            DI\get('db.charset')
+        ),
+
+    'db.user'       => DI\env('DB_USER',    'root'),
+    'db.pass'       => DI\env('DB_PASS',    'root'),
+
+    // Instance
+    IStatement::class => DI\object(Statement::class),
+    IConnection::class => DI\object(Connection::class)
+        ->constructor(
+            DI\get(Dsn::class),
+            DI\get('db.user'),
+            DI\get('db.pass')
+        )
+];

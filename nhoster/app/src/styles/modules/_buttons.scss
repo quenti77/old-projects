@@ -1,0 +1,62 @@
+@import "configs";
+
+@mixin button ($color) {
+    background-color: $color;
+    border: 1px solid lighten($color, 3);
+    &:hover {
+        background-color: darken($color, 6);
+
+        .can-rotate {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 8px 15px;
+    text-decoration: none;
+
+    cursor: pointer;
+    @include button($defaultColor);
+
+    i.fa {
+        margin: 0 6px 0 3px;
+    }
+
+    .can-rotate {
+        transition: transform 500ms linear;
+    }
+
+    transition: background-color 200ms linear, color 250ms linear;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+        flex: 1;
+    }
+}
+
+.btn-small {
+    font-size: 0.8em;
+}
+
+.btn-primary {
+    @include button($primaryColor);
+}
+
+.btn-success {
+    @include button($successColor);
+}
+
+.btn-warning {
+    @include button($warningColor);
+}
+
+.btn-danger {
+    @include button($dangerColor);
+}
+

@@ -1,0 +1,14 @@
+@import "configs";
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: lighten($primaryAppColor, 12);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 1px solid lighten($primaryAppColor, 9);
+    background-color: lighten($primaryAppColor, 4);
+}

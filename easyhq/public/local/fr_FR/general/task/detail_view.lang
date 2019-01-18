@@ -1,0 +1,23 @@
+#########################
+# detail_view.lang (FR) #
+#########################
+
+task.detail.project=Nom du projet
+task.detail.percent=Pourcentage terminé
+task.detail.task.finish=Tâche terminé
+task.detail.table.finish=Finis ?
+task.detail.table.name=Nom de la tâche
+task.detail.table.deadline=Date de fin
+task.detail.table.action=Action
+
+task.detail.notask=Aucune tâche à afficher !
+task.detail.addtask=Ajouter une tâche au projet ...
+task.detail.client.define=Définir un client :
+task.detail.task.name=Pseudo du contact
+task.detail.user.load=Chargement des contacts possible ...
+task.detail.member.list=Rechercher des membres :
+task.detail.search.placeholder=Recherche ...
+
+task.detail_members.member.none=Aucune membres à afficher !
+task.detail_user.member.none=Aucun client à afficher !
+task.detail_user.client.delete=Supprimer le client actuel du projet ...

@@ -1,0 +1,24 @@
+##################
+# user.lang (US) #
+##################
+
+# Login
+user.error.form.missing=Alol required fields must be filled out !
+user.error.form.login=Incorrect username or password !
+user.error.group.unknown=Group does not exist !
+user.error.group.ban=Your accouny has been banned !
+
+user.success.login=You are logged in!
+
+
+# Register
+user.error.form.username=Provided username is in an invalid format ! (Between 3 and 40 characters)
+user.error.form.password=Provided password is in an invalid format ! (Minimum 6 characters)
+user.error.form.password_confirm=Provided password in the confirm field does not match !
+user.error.form.email=E-Mail is in an invalid format! (abc.xyz@domain.tld)
+user.error.register=Account already exists !
+
+user.success.register=Account created successfully !
+
+# New password
+user.error.mail.unknown=Mail invalid !

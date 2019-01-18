@@ -1,0 +1,20 @@
+##################
+# user.lang (US) #
+##################
+
+admin.user.error.rights.ajax=You do not have the rights to modify users
+admin.user.error.rights.html=You do not have the rights to modify users
+
+# Home blade
+admin.home.view.title=Administration mmenu
+admin.home.menu.user=Manage website users ...
+admin.home.menu.group=Manage website groups ...
+
+# User blade
+admin.users.view.title=Manage users :
+admin.users.search=Search users ...
+admin.users.table.name=Username
+admin.users.table.mail=E-Mail
+admin.users.table.group=Group
+admin.users.table.user.load=Loading users ...
+admin.users.table.user.none=No users !

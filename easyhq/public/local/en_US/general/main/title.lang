@@ -1,0 +1,25 @@
+###################
+# title.lang (US) #
+###################
+
+home.title=Home
+
+account.show.title=Account
+account.update.title=Modify my information
+account.reinit.title=Reinitialize my password
+
+book.index.title=Contacts
+
+error.404.title=Page not found !
+
+user.login.title=Login
+user.register.title=Register
+user.forget.title=Forgot my password
+
+admin.group.title=Manage my groups
+admin.home.title=Administration Panel
+admin.user.title=User Management
+
+task.home.title=Project Management
+task.project.title=Project Details
+task.task.title=Task Detail %d

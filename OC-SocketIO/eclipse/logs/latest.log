@@ -1,0 +1,110 @@
+[15:58:53] [main/INFO]: Setting user: Player665
+[15:58:55] [Client thread/INFO]: LWJGL Version: 2.9.1
+[15:59:08] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Socket IO, FMLFileResourcePack:OpenComputers
+[15:59:13] [Sound Library Loader/INFO]: Sound engine started
+[15:59:15] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[15:59:15] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[15:59:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Socket IO, FMLFileResourcePack:OpenComputers
+[15:59:20] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[15:59:20] [Client thread/INFO]: Created: 512x256 textures/items-atlas
+[15:59:20] [Sound Library Loader/INFO]: Sound engine started
+[15:59:27] [Client thread/INFO]: Deleting level Youpi but socket is not inserted
+[15:59:27] [Client thread/INFO]: Attempt 1...
+[15:59:31] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[15:59:31] [Server thread/INFO]: Generating keypair
+[15:59:31] [Server thread/INFO]: Converting map!
+[15:59:31] [Server thread/INFO]: Scanning folders...
+[15:59:31] [Server thread/INFO]: Total conversion count is 0
+[15:59:32] [Server thread/INFO]: Preparing start region for level 0
+[15:59:33] [Server thread/INFO]: Preparing spawn area: 6%
+[15:59:34] [Server thread/INFO]: Preparing spawn area: 12%
+[15:59:35] [Server thread/INFO]: Preparing spawn area: 20%
+[15:59:36] [Server thread/INFO]: Preparing spawn area: 28%
+[15:59:37] [Server thread/INFO]: Preparing spawn area: 37%
+[15:59:38] [Server thread/INFO]: Preparing spawn area: 46%
+[15:59:39] [Server thread/INFO]: Preparing spawn area: 57%
+[15:59:40] [Server thread/INFO]: Preparing spawn area: 68%
+[15:59:41] [Server thread/INFO]: Preparing spawn area: 82%
+[15:59:42] [Server thread/INFO]: Changing view distance to 12, from 10
+[15:59:43] [Server thread/INFO]: Player665[local:E:3745c2d7] logged in with entity id 175 at (-87.5, 83.0, 253.5)
+[15:59:43] [Server thread/INFO]: Player665 joined the game
+[15:59:46] [Client thread/INFO]: [CHAT] §aOpenComputers§f: No supported power providing mod available. Computers, screens and all other components will §lnot§f require energy. Install one of the following mods to enable power: BuildCraft, Electrical Age, IndustrialCraft2, Mekanism or Thermal Expansion. Disable power in the config to suppress this warning.
+[15:59:46] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3518ms behind, skipping 70 tick(s)
+[15:59:53] [Client thread/INFO]: Warning: Clientside chunk ticking took 204 ms
+[15:59:54] [Client thread/INFO]: Warning: Clientside chunk ticking took 120 ms
+[15:59:56] [Client thread/INFO]: Warning: Clientside chunk ticking took 101 ms
+[16:00:03] [Server thread/INFO]: Player665 has just earned the achievement [Taking Inventory]
+[16:00:03] [Client thread/INFO]: [CHAT] Player665 has just earned the achievement [Taking Inventory]
+[16:00:06] [Client thread/INFO]: Warning: Clientside chunk ticking took 159 ms
+[16:00:12] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 7389ms behind, skipping 147 tick(s)
+[16:00:32] [Server thread/ERROR]: Encountered an unexpected exception
+net.minecraft.util.ReportedException: Ticking block entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:709) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]
+Caused by: java.lang.NoSuchMethodError: li.cil.oc.api.FileSystem.asManagedEnvironment(Lli/cil/oc/api/fs/FileSystem;Ljava/lang/String;Lli/cil/oc/api/driver/EnvironmentHost;Ljava/lang/String;I)Lli/cil/oc/api/network/ManagedEnvironment;
+	at li.cil.oc.server.machine.Machine.<init>(Machine.scala:56) ~[Machine.class:?]
+	at li.cil.oc.server.machine.Machine$.create(Machine.scala:990) ~[Machine$.class:?]
+	at li.cil.oc.server.machine.Machine$.create(Machine.scala:965) ~[Machine$.class:?]
+	at li.cil.oc.api.Machine.create(Machine.java:71) ~[Machine.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.li$cil$oc$common$tileentity$traits$Computer$$_machine(Computer.scala:33) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Computer$$_machine$lzycompute(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Computer$$_machine(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.machine(Computer.scala:35) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.machine(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.node(Computer.scala:37) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.node(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Environment$class.isConnected(Environment.scala:31) ~[Environment$class.class:?]
+	at li.cil.oc.common.tileentity.Case.isConnected(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.updateEntity(Computer.scala:113) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.updateEntity(Case.scala:52) ~[Case.class:?]
+	at net.minecraft.world.World.updateEntities(World.java:2160) ~[World.class:?]
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515) ~[WorldServer.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703) ~[MinecraftServer.class:?]
+	... 4 more
+[16:00:32] [Server thread/ERROR]: This crash report has been saved to: G:\java\socketIO-OC\eclipse\.\crash-reports\crash-2016-08-06_16.00.32-server.txt
+[16:00:32] [Server thread/INFO]: Stopping server
+[16:00:32] [Server thread/INFO]: Saving players
+[16:00:32] [Server thread/INFO]: Saving worlds
+[16:00:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:00:33] [Server thread/ERROR]: Exception stopping the server
+java.lang.NoSuchMethodError: li.cil.oc.api.FileSystem.asManagedEnvironment(Lli/cil/oc/api/fs/FileSystem;Ljava/lang/String;Lli/cil/oc/api/driver/EnvironmentHost;Ljava/lang/String;I)Lli/cil/oc/api/network/ManagedEnvironment;
+	at li.cil.oc.server.machine.Machine.<init>(Machine.scala:56) ~[Machine.class:?]
+	at li.cil.oc.server.machine.Machine$.create(Machine.scala:990) ~[Machine$.class:?]
+	at li.cil.oc.server.machine.Machine$.create(Machine.scala:965) ~[Machine$.class:?]
+	at li.cil.oc.api.Machine.create(Machine.java:71) ~[Machine.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.li$cil$oc$common$tileentity$traits$Computer$$_machine(Computer.scala:33) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Computer$$_machine$lzycompute(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Computer$$_machine(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.machine(Computer.scala:35) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.machine(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.node(Computer.scala:37) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.node(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Environment$class.writeToNBTForServer(Environment.scala:96) ~[Environment$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Inventory$$super$writeToNBTForServer(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Inventory$class.writeToNBTForServer(Inventory.scala:24) ~[Inventory$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Rotatable$$super$writeToNBTForServer(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Rotatable$class.writeToNBTForServer(Rotatable.scala:129) ~[Rotatable$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$RedstoneAware$$super$writeToNBTForServer(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.RedstoneAware$class.writeToNBTForServer(RedstoneAware.scala:107) ~[RedstoneAware$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$BundledRedstoneAware$$super$writeToNBTForServer(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.BundledRedstoneAware$class.writeToNBTForServer(BundledRedstoneAware.scala:133) ~[BundledRedstoneAware$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Computer$$super$writeToNBTForServer(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Computer$class.writeToNBTForServer(Computer.scala:171) ~[Computer$class.class:?]
+	at li.cil.oc.common.tileentity.Case.li$cil$oc$common$tileentity$traits$Colored$$super$writeToNBTForServer(Case.scala:19) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.Colored$class.writeToNBTForServer(Colored.scala:38) ~[Colored$class.class:?]
+	at li.cil.oc.common.tileentity.Case.writeToNBTForServer(Case.scala:65) ~[Case.class:?]
+	at li.cil.oc.common.tileentity.traits.TileEntity$class.writeToNBT(TileEntity.scala:85) ~[TileEntity$class.class:?]
+	at li.cil.oc.common.tileentity.Case.writeToNBT(Case.scala:19) ~[Case.class:?]
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.writeChunkToNBT(AnvilChunkLoader.java:395) ~[AnvilChunkLoader.class:?]
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.saveChunk(AnvilChunkLoader.java:204) ~[AnvilChunkLoader.class:?]
+	at net.minecraft.world.gen.ChunkProviderServer.safeSaveChunk(ChunkProviderServer.java:287) ~[ChunkProviderServer.class:?]
+	at net.minecraft.world.gen.ChunkProviderServer.saveChunks(ChunkProviderServer.java:340) ~[ChunkProviderServer.class:?]
+	at net.minecraft.world.WorldServer.saveAllChunks(WorldServer.java:863) ~[WorldServer.class:?]
+	at net.minecraft.server.MinecraftServer.saveAllWorlds(MinecraftServer.java:370) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.stopServer(MinecraftServer.java:405) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.stopServer(IntegratedServer.java:266) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:538) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]

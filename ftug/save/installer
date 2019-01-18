@@ -1,0 +1,305 @@
+-----------------------------------
+-- Installer for qOs and qLoader --
+-----------------------------------
+
+-- Only advanced terminal
+if not term.isColor() then
+	os.reboot()
+end
+
+-- Local variable --
+local files = {}
+
+local running = true
+local qloader = true
+local name = "admin"
+local pass = "admin"
+local textSelect = "none"
+local percent = 0
+local status = ""
+local sX, sY = term.getSize()
+
+-- Local function --
+local function clearTerm()
+	term.setTextColor(colors.white)
+	term.setBackgroundColor(colors.black)
+
+	term.clear()
+	term.setCursorPos(1, 1)
+end
+
+local function drawCheck(bx, by, colorCase, colorCheck, colorBack, colorText, name)
+	term.setBackgroundColor(colorCase)
+	term.setTextColor(colorCheck)
+	term.setCursorPos(bx, by)
+	term.write("   ")
+	term.setCursorPos(bx, by + 1)
+	term.write("   ")
+	term.setCursorPos(bx, by + 2)
+	term.write("   ")
+
+	term.setBackgroundColor(colorBack)
+	term.setTextColor(colorText)
+	term.setCursorPos(bx + 4, by + 1)
+	term.write(name)
+end
+
+local function drawNextButton(name)
+
+	term.setBackgroundColor(colors.blue)
+	term.setTextColor(colors.white)
+
+	x = 3
+	y = sY - 4
+
+	for i = y, y + 2 do
+		for j = x, sX - 3 do
+			term.setCursorPos(j, i)
+			term.write(" ")
+		end
+	end
+
+	taille = string.len(name)
+	term.setCursorPos(sX / 2 - taille / 2, y + 1)
+	term.write(name)
+
+end
+
+local function isClicked(x, y, xMin, xMax, yMin, yMax)
+	return ( ( x >= xMin and x <= xMax ) and ( y >= yMin and y <= yMax) )
+end
+
+local function getFile(path)
+	local sFile = "http://quenti77.fr/scripts/qos/"..path..".lua"
+	local httpFile = http.get(sFile)
+
+	local tempFile = fs.open("/"..path, "w")
+	tempFile.write(httpFile.readAll())
+	tempFile.close()
+
+	httpFile.close()
+	return fs.getSize("/"..path)
+end
+
+local function getFiles()
+
+	for i = 1, #files do
+		getFile(files[i])
+		percent = math.floor(i / #files * 100)
+		percentShow = math.floor(i / #files * (sX - 6))
+		percentString = "Downloading : "..string.format("% 3s", percent).." %"
+
+		clearTerm()
+
+		term.setCursorPos(3, 3)
+		term.write("Installation of qos")
+
+		term.setCursorPos(sX / 2 - string.len(percentString) / 2 + 1, 7)
+		term.write(percentString)
+		for j = 8, 9 do
+			for i = 3, sX - 3 do
+				term.setCursorPos(i, j)
+
+				if (i - 3) <= percentShow then
+					term.setBackgroundColor(colors.green)
+				else
+					term.setBackgroundColor(colors.orange)
+				end
+
+				term.write(" ")
+			end
+		end
+	end
+
+	for i = 0, 5 do
+		percent = 5 - i
+		percentShow = math.floor( i / 5 * (sX - 6))
+		percentString = "Restarting : "..percent.." s "
+
+		clearTerm()
+
+		term.setCursorPos(sX / 2 - string.len(percentString) / 2 + 1, 7)
+		term.write(percentString)
+		for j = 8, 9 do
+			for i = 3, sX - 3 do
+				term.setCursorPos(i, j)
+
+				if (i - 3) <= percentShow then
+					term.setBackgroundColor(colors.green)
+				else
+					term.setBackgroundColor(colors.orange)
+				end
+
+				term.write(" ")
+			end
+		end
+
+		sleep(1)
+	end
+end
+
+-- Propose qLoader
+while running do
+	clearTerm()
+
+	term.setCursorPos(3, 3)
+	term.write("Components to install: (LCTRL for quit)")
+
+	drawCheck(3, 5, colors.lightGray, colors.white, colors.black, colors.lightGray, "installing qOS")
+
+	if qloader then
+		drawCheck(3, 9, colors.green, colors.white, colors.black, colors.green, "installing qLoader")
+	else
+		drawCheck(3, 9, colors.red, colors.white, colors.black, colors.red, "installing qLoader")
+	end
+
+	drawNextButton("Next ==>")
+
+	local ev, a, b, c, d, e = os.pullEvent()
+
+	if ev == "mouse_click" or ev == "monitor_touch" then
+		if isClicked(b, c, 3, 25, 9, 11) then
+			qloader = not qloader
+		elseif isClicked(b, c, 3, sX - 3,sY - 4, sY - 1) then
+			running = false
+		end
+	end
+
+	if ev == "key" then
+		if a == 29 then
+			os.reboot()
+		elseif a == 28 then
+			running = false
+		elseif a == 57 then
+			qloader = not qloader
+		end
+	end
+end
+
+-- Permet de changer le nom et le mot de passe
+running = true
+while running do
+	clearTerm()
+
+	term.setCursorPos(3, 3)
+	term.write("User account: (LCTRL for quit)")
+
+	term.setCursorPos(3, 6)
+	term.write("User name : ")
+
+	term.setCursorPos(3, 10)
+	term.write("User password : ")
+
+	term.setTextColor(colors.black)
+	term.setBackgroundColor(colors.white)
+	for i = 3, sX - 3 do
+		term.setCursorPos(i, 7)
+		
+		if (i - 2 <= string.len(name)) then
+			term.write(string.sub(name, i - 2, i - 2))
+		elseif (i - 2 == (string.len(name) + 1) ) then
+			if textSelect == "name" then
+				term.write("_")
+			else
+				term.write(" ")
+			end
+		else
+			term.write(" ")
+		end
+	end
+
+	for i = 3, sX - 3 do
+		term.setCursorPos(i, 11)
+
+		if (i - 2 <= string.len(pass)) then
+			term.write("*")
+		elseif (i - 2 == (string.len(pass) + 1) ) then
+			if textSelect == "pass" then
+				term.write("_")
+			else
+				term.write(" ")
+			end
+		else
+			term.write(" ")
+		end
+	end
+
+	drawNextButton("Install ==>")
+
+	local ev, a, b, c, d, e = os.pullEvent()
+
+	if ev == "mouse_click" or ev == "monitor_touch" then
+		if isClicked(b, c, 3, sX - 3, 7, 7) then
+			textSelect = "name"
+		elseif isClicked(b, c, 3, sX - 3, 11, 11) then
+			textSelect = "pass"
+		elseif isClicked(b, c, 3, sX - 3,sY - 4, sY - 1) then
+			running = false
+		else
+			textSelect = "none"
+		end
+	end
+
+	if ev == "key" then
+		if a == 29 then
+			os.reboot()
+		elseif a == 28 then
+			running = false
+		elseif a == 15 then
+			if textSelect == "none" then
+				textSelect = "name"
+			elseif textSelect == "name" then
+				textSelect = "pass"
+			elseif textSelect == "pass" then
+				textSelect = "none"
+			end
+		elseif a == 14 then
+			if textSelect == "name" then
+				name = string.sub(name, 1, string.len(name) - 1)
+			elseif textSelect == "pass" then
+				pass = string.sub(pass, 1, string.len(pass) - 1)
+			end
+		end
+	end
+
+	if ev == "char" then
+		if textSelect == "name" then
+			name = name..a
+		elseif textSelect == "pass" then
+			pass = pass..a
+		end
+	end
+end
+
+-- Qloader files
+if qloader then
+	table.insert(files, "qloader/startup")
+	table.insert(files, "qloader/option")
+	table.insert(files, "qloader/password")
+	table.insert(files, "qloader/ctrl")
+
+	if fs.exists("qloader") then
+		fs.delete("qloader")
+	end
+end
+
+-- Qos files
+table.insert(files, "qOS/startup")
+
+-- Startup file for the computer
+table.insert(files, "startup")
+
+if fs.exists("qos") then
+	fs.delete("qos")
+end
+
+-- Une fois les choix finis on lance l'installation
+getFiles()
+
+local config = fs.open("qOS/user.cfg", "w")
+
+config.writeLine("name="..name)
+config.writeLine("pass="..pass)
+config.close()
+
+os.reboot()

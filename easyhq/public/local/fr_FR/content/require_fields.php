@@ -1,0 +1,1 @@
+<p class="text-danger">Tous les champs marqués d'un astérisque (*) sont obligatoires.</p>

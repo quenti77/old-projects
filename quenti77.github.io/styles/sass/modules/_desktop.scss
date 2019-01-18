@@ -1,0 +1,141 @@
+@import "../../../node_modules/susy/sass/susy";
+
+@media (min-width: 1200px) {
+
+    .container {
+        @include container;
+    }
+
+    .content {
+        @include span(10);
+    }
+
+    .content-action {
+        @include span(10);
+
+        .btn-leave {
+        }
+    }
+
+    .message {
+        .message-avatar {
+            width: 64px;
+            height: 64px;
+
+            margin-bottom: 10px;
+        }
+
+        .message-author {
+            margin-left: 80px;
+            padding-top: 20px;
+
+            em {
+                font-size: 0.75em;
+            }
+        }
+
+        .message-content {
+            margin: 10px 0 0;
+            clear: both;
+        }
+    }
+
+    .sidebar {
+        @include span(2 last);
+    }
+
+    .sidebar-panel {
+        bottom: 32px;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+            background-color: #3476b4;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #16334e;
+
+            &:hover {
+                background-color: #11253b;
+            }
+
+            &:active {
+                background-color: #11253b;
+            }
+        }
+    }
+
+    .user {
+        position: relative;
+        margin-bottom: 30px;
+
+        .user-avatar {
+            width: 48px;
+            height: 48px;
+
+            border: 3px solid #b3b3b3;
+            border-radius: 50%;
+        }
+
+        .user-nickname {
+            margin-left: 54px;
+            padding-top: 12px;
+            display: block;
+        }
+    }
+
+    .channel {
+        text-align: left;
+        margin-left: 6px;
+
+        .channel-name {
+            display: inline;
+        }
+    }
+
+    .sidebar-buttons {
+        .sidebar-button {
+            width: 50%;
+        }
+
+        .sidebar-menu {
+            display: none;
+        }
+    }
+
+    .top-container {
+        .top-content {
+            @include span(4 at 4);
+
+            input, .btn {
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                border-radius: 6px;
+            }
+
+            .btn {
+                &:hover, &:focus {
+                    background-color: rgba(15, 100, 20, 0.55);
+                    box-shadow: inset 0 0 3px 1px rgba(24,24,24,0.7);
+                }
+            }
+
+            .btn-primary {
+                &:hover, &:focus {
+                    background-color: rgba(29, 75, 126, 0.85);
+                    box-shadow: inset 0 0 3px 1px rgba(24,24,24,0.7);
+                }
+            }
+
+            .btn-danger {
+                &:hover, &:focus {
+                    background-color: rgba(126, 29, 29, 0.85);
+                    box-shadow: inset 0 0 3px 1px rgba(24,24,24,0.7);
+                }
+            }
+        }
+    }
+
+    .inline-hidden-mobile { display: inline; }
+    .inline-show-mobile { display: none; }
+}

@@ -1,0 +1,438 @@
+@import "../../node_modules/susy/sass/susy";
+
+/* Le module qui défini les styles par défaut */
+@import "modules/init";
+
+/* Paramètre pour la grille version mobile */
+$susy: (
+        container: 100%,
+        columns: 12,
+        gutters: 0px/100px,
+        gutter-position: inside-static,
+        column-width: 100px,
+        global-box-sizing: border-box
+);
+
+@include layout($susy);
+
+$bg-content: #2b2b2b;
+
+.container {
+    @include container;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    @include span(11);
+    min-width: 290px;
+
+    background-color: $bg-content;
+
+    overflow-y: auto;
+
+    top: 0;
+    left: 0;
+    bottom: 36px;
+
+    transition: all 200ms cubic-bezier(0.64, 0.34, 0.33, 0.76);
+}
+
+.content-action {
+    display: flex;
+    position: absolute;
+    @include span(11);
+
+    min-width: 290px;
+
+    background-color: #2b2b2b;
+    box-shadow: 0 -2px 6px 0 #474747;
+
+    left: 0;
+    bottom: 0;
+
+    height: 36px;
+    transition: all 200ms cubic-bezier(0.64, 0.34, 0.33, 0.76);
+
+    .btn-leave {
+        margin: 6px 0 6px 6px;
+        width: 24px;
+        height: 24px;
+
+        background-color: #d04238;
+        color: #404040;
+
+        box-shadow: 0 0 6px 1px #a94137;
+        border-radius: 50%;
+    }
+
+    .input-message {
+        display: block;
+
+        width: 100%;
+        margin: 6px;
+        padding: 4px;
+
+        outline: none!important;
+
+        border-radius: 2px;
+        box-shadow: inset 0 0 3px 1px rgba(24,24,24,0.7);
+        transition: all 200ms cubic-bezier(0.56, 0.28, 0.52, 0.81);
+
+        color: #424242;
+
+        &:focus {
+            background-color: rgba(247, 247, 247, 0.95);
+            color: #2b2d2f;
+        }
+    }
+}
+
+.message {
+    position: relative;
+    margin: 10px 42px 10px 10px;
+    padding: 10px;
+
+    color: #b8b8b8;
+
+    .message-avatar {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 10px;
+        border: 1px solid #191919;
+
+        float: left;
+        border-radius: 50%;
+    }
+
+    .message-author {
+        margin-left: 64px;
+        padding-top: 10px;
+
+        a {
+            text-decoration: none;
+            color: #b8b8b8;
+        }
+
+        em {
+            margin-top: 4px;
+            color: #6e6e6e;
+            font-size: 0.75em;
+            display: inline-block;
+        }
+    }
+
+    .message-content {
+        margin: -10px;
+        margin-top: 20px;
+
+        color: #e2e2e2;
+        clear: both;
+    }
+
+    .message-separator {
+        margin-top: 20px;
+        border: 1px solid #383838;
+        border-radius: 8px;
+    }
+}
+
+/* Notre sidebar de droite */
+.sidebar {
+    position: fixed;
+    @include span(1 last);
+
+    min-width: 32px;
+
+    background-color: #163652;
+    color: #e0e0e0;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 2px solid #33548e;
+
+    transition: all 200ms ease;
+
+    .sidebar-content {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.sidebar-panel {
+    position: absolute;
+    padding: 4px;
+
+    top: 0;
+    left: 0;
+    bottom: 96px;
+    right: 0;
+
+    overflow-x: hidden;
+    overflow-y: visible;
+    z-index: 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.user {
+    position: relative;
+    clear: both;
+
+    .user-avatar {
+        width: 99%;
+        height: auto;
+        margin-bottom: 8px;
+
+        border-radius: 50%;
+        float: left;
+
+        transition: all 200ms ease;
+
+        &:hover {
+            -webkit-box-shadow: 0 0 10px 2px #3a3a3a;
+            box-shadow: 0 0 10px 2px #3a3a3a;
+        }
+    }
+
+    .user-nickname {
+        display: none;
+    }
+
+    .user-online {
+        border-color: #45b323!important;
+    }
+
+    .user-absent {
+        border-color: #b36e22 !important;
+    }
+}
+
+.channel {
+    position: relative;
+    margin-bottom: 12px;
+
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.1em;
+    overflow: hidden;
+
+    transition: all 200ms ease;
+
+    .channel-name {
+        padding-left: 4px;
+        display: none;
+
+        transition: all 200ms ease;
+    }
+
+    &:hover {
+        color: #4a5bff!important;
+
+        .channel-name {
+            color: #627bff!important;
+        }
+    }
+}
+
+.channel-selected {
+    color: #66bdc0!important;
+
+    .channel-name {
+        color: #4a9194!important;
+    }
+}
+
+/* Nos boutons en bas de la sidebar */
+.sidebar-buttons {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: #cccccc;
+    z-index: 1;
+
+    .sidebar-button {
+        position: relative;
+        display: inline-block;
+        float: left;
+
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 32px;
+
+        text-align: center;
+        text-decoration: none;
+        line-height: 32px;
+
+        background-color: #001225;
+        color: #a8c6fa;
+
+        &:after {
+            clear: both;
+        }
+    }
+
+    .sidebar-active {
+        background-color: #002448;
+        color: #ebebeb;
+    }
+
+    .sidebar-menu {
+        background-color: #00265c;
+        display: inline-block;
+    }
+}
+
+// Tout les élements quand le menu est déployé
+.user-nickname-mobile {
+    margin-left: 54px!important;
+    padding-top: 12px!important;
+    display: block!important;
+}
+
+.user-avatar-extend {
+    width: 48px!important;
+    border: 3px solid #b3b3b3!important;
+}
+
+.top-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 10px;
+    border-bottom: 2px solid #1f1f1f;
+    background-color: #444444;
+
+    text-align: center;
+    color: #e1e1e1;
+
+    font-size: 1.25em;
+    line-height: 1.25em;
+    z-index: 1001;
+}
+
+.top-message-success {
+    border-bottom-color: #147b13;
+    background-color: #135d12;
+    box-shadow: inset 0 0 5px 1px #134312;
+}
+
+.top-message-danger {
+    border-bottom-color: #941919;
+    background-color: #5d1616;
+    box-shadow: inset 0 0 5px 1px #3d1010;
+}
+
+.top-container {
+    z-index: 1000;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(10, 10, 10, 0.85);
+    color: #b8b8b8;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        @include span(8 at 2);
+
+        label, input, .btn {
+            margin-bottom: 8px;
+            padding: 8px 8px 8px 16px;
+        }
+
+        label {
+            margin-top: 6px;
+        }
+
+        input, .btn {
+            outline: none!important;
+            height: 36px;
+
+            -webkit-border-radius: 18px;
+            -moz-border-radius: 18px;
+            border-radius: 18px;
+
+            box-shadow: inset 0 0 3px 1px rgba(24,24,24,0.7);
+            transition: all 200ms cubic-bezier(0.56, 0.28, 0.52, 0.81);
+        }
+
+        input {
+            background-color: rgba(57, 57, 57, 0.55);
+            color: #eee;
+
+            &:focus {
+                background-color: rgba(247, 247, 247, 0.95);
+                color: #2b2d2f;
+            }
+        }
+
+        .btn {
+            margin-top: 6px;
+            border: 3px solid rgba(15, 100, 20, 0.55);
+            background-color: transparent;
+            color: #cecece;
+        }
+
+        .btn-primary {
+            border: 3px solid rgba(29, 75, 126, 0.85);
+        }
+
+        .btn-danger {
+            border: 3px solid rgba(126, 29, 29, 0.85);
+        }
+    }
+}
+
+.force-inline { display: inline!important; }
+.space-left { padding-left: 8px!important; }
+.important-space-left { padding-left: 25%!important; }
+.text-left { text-align: left!important; }
+.middle-width { width: 50%!important; }
+
+.inline-hidden-mobile { display: none; }
+.inline-show-mobile { display: inline; }
+
+.hidden-template { display: none; }
+.hidden-form {
+    display: none!important;
+    transition: all 200ms cubic-bezier(0.56, 0.28, 0.52, 0.81);
+}
+
+.input-failed {
+    background-color: rgba(206, 77, 77, 0.75)!important;
+
+    &:focus {
+        background-color: rgba(247, 247, 247, 0.95)!important;
+        color: rgba(163, 29, 34, 0.85) !important;
+    }
+}
+
+@import "modules/tablet";
+@import "modules/desktop";

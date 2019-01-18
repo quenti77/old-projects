@@ -1,0 +1,16 @@
+##########################
+# project_spec.lang (US) #
+##########################
+
+task.project_spec.form.name=Project Name :
+task.project_spec.form.description=Description :
+task.project_spec.form.price=Price (€) :
+task.project_spec.form.deadline.date=Deadline :
+task.project_spec.form.deadline.hour=Dealine (Hour) :
+task.project_spec.form.collaborators=Coworkers :
+
+task.project_spec.form.add=Add
+task.project_spec.form.update=Modify
+
+task.project_spec.form.delete=Delete
+task.project_spec.form.project.detail=Project Details

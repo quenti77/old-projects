@@ -1,0 +1,25 @@
+####################
+# update.lang (US) #
+####################
+
+user.update.view.title=Modify my information :
+
+user.update.form.avatar=Change avatar :
+user.update.form.avatar.delete=Delete avatar
+
+user.update.form.password=Password :
+user.update.form.password.last=Old password :
+user.update.form.password.last.placeholder=Old password ...
+
+user.update.form.password.new=New password :
+user.update.form.password.new.placeholder=New password ...
+user.update.form.password.confirm=Confirm password :
+user.update.form.password.confirm.placeholder=Confirm password ...
+
+user.update.form.information=Personal information
+user.update.form.firstname=First Name :
+user.update.form.lastname=Family Name :
+user.update.form.information.show=Show my personal information
+
+user.update.form.update=Modify my profile
+user.update.profil.back=Go back to my profile ...

@@ -1,0 +1,44 @@
+{
+    "name": "quenti77/phq",
+    "version": "v0.5.7",
+    "description": "A very simple PHP MVC Framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quentin",
+            "email": "quentin.ysambert@gmail.com",
+            "homepage": "https://doc.easyweb-quality.fr",
+            "role": "Developper"
+        }
+    ],
+    "scripts": {
+      "post-autoload-dump": "@php bin/composer.php",
+      "test": "phpunit"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "PHQ\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^2.4",
+        "guzzlehttp/psr7": "^1.4",
+        "php-di/php-di": "^5.4",
+        "psr/log": "^1.0",
+        "zendframework/zend-expressive-fastroute": "^3.0",
+        "http-interop/http-middleware": "^0.5.0",
+        "http-interop/response-sender": "^1.0",
+        "middlewares/whoops": "^1.0",
+        "swiftmailer/swiftmailer": "^6.0",
+        "psr/http-server-middleware": "^1.0"
+    },
+    "require-dev": {
+        "robmorgan/phinx": "^0.9.2",
+        "phpunit/phpunit": "^6.5",
+        "fzaninotto/faker": "^1.7",
+        "squizlabs/php_codesniffer": "^3.3"
+    }
+}

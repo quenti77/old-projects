@@ -1,0 +1,14 @@
+export const AUTH_USER = 'AUTH_USER'
+export const SET_SETTINGS = 'SET_SETTINGS'
+
+export const SET_PROJECTS = 'SET_PROJECTS'
+export const ADD_PROJECT = 'ADD_PROJECT'
+export const UPDATE_PROJECT = 'UPDATE_PROJECT'
+export const UPDATE_PROJECT_INFO = 'UPDATE_PROJECT_INFO'
+export const REMOVE_PROJECT = 'REMOVE_PROJECT'
+
+export const ADD_LOG = 'ADD_LOG'
+export const CLEAR_LOG = 'CLEAR_LOG'
+
+export const ADD_CONTAINER = 'ADD_CONTAINER'
+export const REMOVE_CONTAINER = 'REMOVE_CONTAINER'

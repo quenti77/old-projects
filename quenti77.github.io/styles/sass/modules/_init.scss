@@ -1,0 +1,28 @@
+/* Tous les resets que l'on veut */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Tous ce qui concerne la page */
+html, body {
+    background-color: #3476b4;
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+body {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

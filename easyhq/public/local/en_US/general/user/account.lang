@@ -1,0 +1,16 @@
+#####################
+# account.lang (US) #
+#####################
+
+account.error.form.size=Avatar size is too large.
+account.error.form.format= This avatar is in an invalid format.
+account.error.reinit=Reinitialization error.
+
+account.success.modify=Profile update complete !
+account.success.register.mail=ER-Mail address confirmed !
+account.success.newpasswd=Password changed successfully !
+
+user.account.register=Registered since :
+user.account.connection.last=Last connection :
+user.account.profil.update=Modify Profile
+user.account.profil.contact=Manage Contacts

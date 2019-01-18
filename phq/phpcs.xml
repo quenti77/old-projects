@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="PHQ">
+    <description>My rules</description>
+
+    <arg name="colors" />
+    <arg value="p"/>
+
+    <file>src</file>
+    <file>app</file>
+
+    <rule ref="PSR2" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+</ruleset>

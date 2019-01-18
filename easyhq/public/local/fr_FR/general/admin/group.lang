@@ -1,0 +1,15 @@
+###################
+# group.lang (FR) #
+###################
+
+admin.group.error.rights.ajax=Vous n'avez pas les droits de modifier les groupes
+admin.group.error.rights.html=Vous n'avez pas les droits de modifier les groupes
+admin.group.error.count=Il ne reste plus qu'un seul groupe. Il n'est pas possible de le supprimer
+
+admin.groups.view.title=Gestion des groupes
+admin.groups.table.name=Nom du groupe
+admin.groups.table.desc=Description
+admin.groups.table.auth_site=Droits du site
+admin.groups.table.auth_news=Droits des news
+admin.groups.group.add=Ajouter un groupe ...
+admin.groups.group.none=Aucun groupe disponible ...

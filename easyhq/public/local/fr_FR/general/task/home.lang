@@ -1,0 +1,14 @@
+##################
+# home.lang (FR) #
+##################
+
+task.home.title.view=Gestion des projets :
+task.home.table.name=Nom du projet
+task.home.table.price=Prix (en €)
+task.home.table.leader=Chef du projet
+task.home.table.client=Client
+task.home.table.deadline=Date de fin
+
+task.home.project.add=Ajouter un nouveau projet ...
+task.home.client.none=Aucun client
+task.home.project.none=Aucun projet à afficher !

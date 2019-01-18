@@ -1,0 +1,16 @@
+##########################
+# project_spec.lang (FR) #
+##########################
+
+task.project_spec.form.name=Nom du projet :
+task.project_spec.form.description=Description :
+task.project_spec.form.price=Prix (en €) :
+task.project_spec.form.deadline.date=Date de fin :
+task.project_spec.form.deadline.hour=Heure de fin :
+task.project_spec.form.collaborators=Les collaborateurs :
+
+task.project_spec.form.add=Ajouter
+task.project_spec.form.update=Modifier
+
+task.project_spec.form.delete=Supprimer
+task.project_spec.form.project.detail=Détails du projet

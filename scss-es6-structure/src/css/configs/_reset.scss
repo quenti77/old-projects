@@ -1,0 +1,18 @@
+/* Ce que l'on va mettre pour tous les éléments */
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    outline: none;
+
+    font-family: "Open Sans", Helvetica, "FontAwesome", sans-serif;
+    text-decoration: none;
+    color: #fcfcfc;
+}
+
+html, body {
+    width: 100%;
+
+    min-width: 320px;
+}

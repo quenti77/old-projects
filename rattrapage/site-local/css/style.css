@@ -1,0 +1,11 @@
+/* line 3, ../sass/style.scss */
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 8, ../sass/style.scss */
+.table th {
+  text-align: center;
+  vertical-align: middle;
+}

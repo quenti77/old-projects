@@ -1,0 +1,55 @@
+package fr.io.lib;
+
+import org.json.JSONObject;
+
+import io.socket.IOAcknowledge;
+import io.socket.IOCallback;
+import io.socket.SocketIOException;
+
+public class SocketCallback implements IOCallback {
+
+	private boolean connected = false;
+	
+	public void emit(String action, String message) {
+		
+	}
+	
+	public boolean isConnected() {
+		return this.connected;
+	}
+	
+	@Override
+	public void on(String arg0, IOAcknowledge arg1, Object... arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onConnect() {
+		this.connected = true;
+	}
+
+	@Override
+	public void onDisconnect() {
+		this.connected = false;
+	}
+
+	@Override
+	public void onError(SocketIOException arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMessage(String arg0, IOAcknowledge arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMessage(JSONObject arg0, IOAcknowledge arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

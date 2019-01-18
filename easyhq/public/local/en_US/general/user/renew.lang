@@ -1,0 +1,12 @@
+###################
+# renew.lang (US) #
+###################
+
+user.renew_passwd.view.title=Change password :
+
+user.renew_passwd.form.password=New password :
+user.renew_passwd.form.password.placeholder=New password ...
+user.renew_passwd.form.password.confirm=Confirm password
+user.renew_passwd.form.password.confirm.placeholder=Confirm password ...
+
+user.search.user.none=No users !

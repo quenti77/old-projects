@@ -1,0 +1,4 @@
+node_modules
+.idea
+server-api.log
+server-socket.log

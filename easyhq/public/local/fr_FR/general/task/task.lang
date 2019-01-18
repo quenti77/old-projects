@@ -1,0 +1,24 @@
+##################
+# task.lang (FR) #
+##################
+
+task.task.success.member.add=Le membre à bien été ajouté à la tâche !
+task.task.success.member.remove=Le membre à bien été enlevé de la tâche !
+
+# Member task
+task.task_members.table.name=Nom du membre
+task.task_members.table.affected=Affecté ?
+task.task_members.table.action=Action
+
+task.task_members.case.yes=OUI
+task.task_members.case.no=NON
+task.task_members.none=Aucun membre dans le projet à afficher !
+
+# Spec task
+task.task_spec.form.name=Nom de la tâche :
+task.task_spec.form.description=Description :
+task.task_spec.form.deadline.date=Date de fin :
+task.task_spec.form.deadline.hour=Heure de fin :
+
+task.task_spec.add=Ajouter
+task.task_spec.update=Modifier

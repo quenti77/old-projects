@@ -1,0 +1,11 @@
+// Font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+// reset et config
+@import "configs/reset";
+@import "configs/setting";
+
+// design par catégorie
+@import "design/mobile";
+@import "design/tablet";
+@import "design/desktop";

@@ -1,0 +1,25 @@
+####################
+# update.lang (FR) #
+####################
+
+user.update.view.title=Modifier mes informations :
+
+user.update.form.avatar=Changer votre avatar :
+user.update.form.avatar.delete=Supprimer mon avatar actuel
+
+user.update.form.password=Mot de passe :
+user.update.form.password.last=Votre ancien mot de passe :
+user.update.form.password.last.placeholder=Votre ancien mot de passe ...
+
+user.update.form.password.new=Votre nouveau mot de passe :
+user.update.form.password.new.placeholder=Votre nouveau mot de passe ...
+user.update.form.password.confirm=Confirmez votre mot de passe :
+user.update.form.password.confirm.placeholder=Confirmez votre mot de passe ...
+
+user.update.form.information=Information personnelles
+user.update.form.firstname=Votre prénom :
+user.update.form.lastname=Votre nom de famille :
+user.update.form.information.show=Afficher mes informations personnelles
+
+user.update.form.update=Modifier mon profil
+user.update.profil.back=Revenir à mon profil ...

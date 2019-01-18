@@ -1,0 +1,22 @@
+local p = peripheral.wrap("left")
+
+-- Nouvelle page
+p.newPage()
+
+p.setPageTitle("Page 1")
+p.write("Couleur noir")
+p.setCursorPos(1, 2)
+p.write("============")
+p.endPage()
+
+print("Appuyer sur enter pour ecrire la nouvelle page")
+read()
+
+-- Seconde page
+p.newPage()
+p.setPageTitle("Page 2")
+p.setCursorPos(3, 3)
+p.write("Orange facture")
+p.setCursorPos(4, 4)
+p.write("------------")
+p.endPage()

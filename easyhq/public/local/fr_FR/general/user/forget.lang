@@ -1,0 +1,8 @@
+####################
+# forget.lang (FR) #
+####################
+
+user.forget.view.title=J'ai oublié mon mot de passe ...
+user.forget.form.mail=Votre adresse mail :
+user.forget.form.mail.placeholder=Votre adresse mail ...
+user.forget.form.resend=Changer mon mot de passe

@@ -1,0 +1,8 @@
+/.idea/*
+/cache/views/*
+/public/img/avatar/*
+
+/app/Config/dev.php
+/app/Config/prod.php
+/adminer.php
+/nginx.conf

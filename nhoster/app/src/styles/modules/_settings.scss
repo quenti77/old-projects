@@ -1,0 +1,33 @@
+@import "configs";
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    outline: none;
+
+    color: invert($primaryAppColor);
+    font-family: "Helvetica Neue", Helvetica, Arial, "FontAwesome", sans-serif
+}
+
+html, body {
+    background-color: $primaryAppColor;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.text-2x {
+    font-size: 1.2em;
+}
+
+.flex-space {
+    flex: 1;
+}

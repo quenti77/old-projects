@@ -1,0 +1,19 @@
+#####################
+# details.lang (US) #
+#####################
+
+# Error
+task.details.error.date=The date is not in a valid format !
+task.details.error.date.missing=the date is not complete !
+task.details.error.date.deadline=The task deadline is not between today and the project deadline !
+
+task.details.error.form.missing=You must fill out all the obligatory fields!
+task.details.project.unknown= This project does not exist !
+
+# Success
+task.details.success.new=New task created successfully !
+task.details.success.update=This task has been updated successfully !
+task.details.success.delete=This task has been succcesfully deleted !
+task.details.success.client.new=The client has been defined !
+task.details.success.member.remove=The member has successfully been taken out of this project !
+task.details.success.member.add=The member has successfully been added to this project !

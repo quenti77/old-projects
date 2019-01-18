@@ -1,0 +1,5 @@
+package fr.io.item;
+
+public class SocketIOAdapter {
+
+}

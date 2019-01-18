@@ -1,0 +1,26 @@
+@import "modules/configs";
+@import "modules/settings";
+@import "modules/buttons";
+@import "modules/scrollbar";
+
+@import "modules/header";
+@import "modules/modal";
+
+.content {
+    flex: 1;
+    overflow: auto;
+}
+
+.footer {
+    padding: 0 10px;
+    background-color: lighten($primaryAppColor, 3);
+
+    height: 25px;
+    line-height: 25px;
+
+    font-size: 0.8em;
+}
+
+@import "modules/projects";
+@import "modules/options";
+@import "modules/animations";

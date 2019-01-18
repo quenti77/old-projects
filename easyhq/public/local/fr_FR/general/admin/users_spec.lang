@@ -1,0 +1,13 @@
+########################
+# users_spec.lang (FR) #
+########################
+
+admin.users_spec.form.nickname=Le pseudo de l'utilisateur :
+admin.users_spec.form.firstname=Son prénom :
+admin.users_spec.form.lastname=Son nom de famille :
+admin.users_spec.form.mail=Son adresse mail :
+admin.users_spec.form.group=Son groupe sur le site :
+admin.users_spec.form.avatar=Supprimer son avatar ...
+admin.users_spec.form.update=Modifier
+admin.users_spec.form.profil=Voir son profil
+admin.users_spec.form.mail.resend=Réenvoyer un mail de confirmation

@@ -1,0 +1,5 @@
+package fr.io.block;
+
+public class SocketAdapter {
+
+}

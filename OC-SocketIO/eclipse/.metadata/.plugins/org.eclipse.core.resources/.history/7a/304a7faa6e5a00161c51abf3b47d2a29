@@ -1,0 +1,22 @@
+package fr.io.item;
+
+public class SocketIOAdapter {
+
+	
+	public static void mainRegistry(){
+		initializeItem();
+		registerItem();
+		
+	}
+	
+	public static void initializeItem(){
+		
+		
+		
+	}
+	
+	public static void registerItem(){
+		
+		
+	}
+}

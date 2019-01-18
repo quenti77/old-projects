@@ -1,0 +1,12 @@
+###################
+# renew.lang (FR) #
+###################
+
+user.renew_passwd.view.title=Changer votre mot de passe :
+
+user.renew_passwd.form.password=Votre nouveau mot de passe :
+user.renew_passwd.form.password.placeholder=Votre nouvea mot de passe ...
+user.renew_passwd.form.password.confirm=Confirmez votre mot de passe :
+user.renew_passwd.form.password.confirm.placeholder=Confirmez votre mot de passe ...
+
+user.search.user.none=Aucun utilisateur à afficher !

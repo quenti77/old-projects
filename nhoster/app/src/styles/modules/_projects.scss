@@ -1,0 +1,108 @@
+@import "configs";
+
+@mixin project ($color) {
+    border: 2px solid darken($primaryAppColor, 3);
+
+    .project-title {
+        background-color: $color;
+    }
+
+    .project-actions {
+        border-top: 1px solid darken($primaryAppColor, 3);
+    }
+}
+
+.projects, .options {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: stretch;
+}
+
+.project, .project-info {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    margin: 10px;
+
+    @include project($primaryAppColor);
+
+    .project-title, .project-content {
+        padding: 8px;
+    }
+
+    .project-title {
+        margin-bottom: 6px;
+
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .project-content {
+        flex: 1;
+    }
+
+    .project-log {
+        flex: 1;
+        overflow-y: auto;
+
+        margin-top: 8px;
+        padding: 7px 0;
+        border-top: 1px solid darken($primaryAppColor, 3);
+    }
+
+    .project-actions {
+        height: 35px;
+        display: flex;
+
+        .btn:first-child {
+            flex: 1;
+        }
+
+        .header-btn {
+            font-size: 1em;
+            height: 100%;
+        }
+    }
+
+    .primary {
+        color: lighten($primaryColor, 10);
+    }
+
+    .success {
+        color: $successColor;
+    }
+
+    .warning {
+        color: $warningColor;
+    }
+
+    .danger {
+        color: lighten($dangerColor, 10);
+    }
+}
+
+.project {
+    min-width: 210px;
+    max-width: 210px;
+
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.project-primary {
+    @include project($primaryColor);
+}
+
+.project-success {
+    @include project($successColor);
+}
+
+.project-warning {
+    @include project(darken($warningColor, 10));
+}
+
+.project-danger {
+    @include project($dangerColor);
+}

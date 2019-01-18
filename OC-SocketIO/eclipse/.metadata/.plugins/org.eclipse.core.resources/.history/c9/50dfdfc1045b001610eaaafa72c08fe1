@@ -1,0 +1,40 @@
+package fr.io.block;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import fr.io.lib.RefStrings;
+import li.cil.oc.api.Driver;
+import li.cil.oc.api.machine.Arguments;
+import li.cil.oc.api.machine.Callback;
+import li.cil.oc.api.machine.Context;
+import li.cil.oc.api.network.SimpleComponent;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.tileentity.TileEntity;
+
+import cpw.mods.fml.common.Optional;
+public class SocketIOAdapter {
+
+	
+	public static void mainRegistry(){
+		initializeBlock();
+		registerItem();
+	}
+	
+	public static Block IOAdapter;
+	
+	public static void initializeBlock(){
+		IOAdapter = new SocketAdapter(Material.iron)
+				.setBlockName("Socket IO Adapter")
+				.setCreativeTab(CreativeTabs.tabRedstone)
+				.setBlockTextureName(RefStrings.MODID + ":socketio");
+	}
+	
+	public static void registerItem(){
+		GameRegistry.registerTileEntity(SocketTileEntity.class, "socket_tile_entity");
+		GameRegistry.registerBlock(IOAdapter, IOAdapter.getUnlocalizedName());
+	}
+	
+	
+	
+}

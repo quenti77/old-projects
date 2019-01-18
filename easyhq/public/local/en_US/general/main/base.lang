@@ -1,0 +1,18 @@
+##################
+# base.lang (US) #
+##################
+
+# Main menu
+base.menu.home=Home
+base.menu.project=Projects
+base.menu.contact=Contact us
+base.menu.admin=Administration
+
+# Member menu
+base.menu.welcome=Welcome
+base.menu.welcome.visitor=Welcome visitor
+
+base.menu.login=Login
+base.menu.register=Register
+base.menu.account=Account
+base.menu.logout=Logout

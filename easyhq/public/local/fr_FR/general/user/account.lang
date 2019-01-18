@@ -1,0 +1,16 @@
+#####################
+# account.lang (FR) #
+#####################
+
+account.error.form.size=L'avatar est trop lourde.
+account.error.form.format=L'avatar n'est pas une image valide.
+account.error.reinit=Erreur lors de la réinitialisation.
+
+account.success.modify=Mise à jour de votre profil terminé !
+account.success.register.mail=Votre adresse mail à bien été confirmer !
+account.success.newpasswd=Votre mot de passe à bien été changé !
+
+user.account.register=Inscrit depuis le :
+user.account.connection.last=Dernière connexion le :
+user.account.profil.update=Modifier votre profil
+user.account.profil.contact=Gérez vos contacts

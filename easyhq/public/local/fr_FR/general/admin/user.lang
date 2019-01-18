@@ -1,0 +1,20 @@
+##################
+# user.lang (FR) #
+##################
+
+admin.user.error.rights.ajax=Vous n'avez pas les droits de modifier les utilisateurs
+admin.user.error.rights.html=Vous n'avez pas les droits de modifier les utilisateurs
+
+# Home blade
+admin.home.view.title=Menu principale de l'administration
+admin.home.menu.user=Gestion des utilisateurs du site ...
+admin.home.menu.group=Gestion des groupes du site ...
+
+# User blade
+admin.users.view.title=Gestion des utilisateurs :
+admin.users.search=Rechercher un utilisateur ...
+admin.users.table.name=Nom de l'utilisateur
+admin.users.table.mail=Adresse mail
+admin.users.table.group=Groupe
+admin.users.table.user.load=Chargement des utilisateurs en cours ...
+admin.users.table.user.none=Aucun utilisateur à afficher !

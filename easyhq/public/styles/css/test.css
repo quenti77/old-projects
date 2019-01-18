@@ -1,0 +1,47 @@
+.center-menu {
+    text-align: center!important;
+}
+
+.center-menu li {
+    padding: 0.5em 1em;
+}
+
+.img-account img {
+    border: 2px solid #222222;
+    border-radius: 64px;
+    width: 128px;
+    height: 128px;
+    margin-bottom: 10px;
+}
+
+.avatar_profil {
+    margin: 15px;
+    font-size: 1.2em;
+}
+
+.avatar_profil img {
+    float: left;
+    margin-right: 18px;
+    border: 2px solid #2BB8FF;
+    box-shadow: 0 0 4px 1px #4278ff;
+    width: 128px;
+    height: 128px;
+}
+
+.avatar_profil strong {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.profil {
+    clear: both;
+    margin-top: 25px;
+}
+
+.menu-button {
+    list-style-type: none;
+}
+
+.menu-button li {
+    margin: 10px;
+}

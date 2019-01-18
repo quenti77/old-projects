@@ -1,0 +1,15 @@
+###################
+# group.lang (US) #
+###################
+
+admin.group.error.rights.ajax=You do not have the rights to modify groups
+admin.group.error.rights.html=You do not have the rights to modify groups
+admin.group.error.count=There is only one group. Deleting it is impossible.
+
+admin.groups.view.title=Group Management
+admin.groups.table.name=Group Name
+admin.groups.table.desc=Description
+admin.groups.table.auth_site=Website Rights
+admin.groups.table.auth_news=News Rights
+admin.groups.group.add=Add a group...
+admin.groups.group.none=No group available...

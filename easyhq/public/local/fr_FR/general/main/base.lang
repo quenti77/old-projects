@@ -1,0 +1,18 @@
+##################
+# base.lang (FR) #
+##################
+
+# Main menu
+base.menu.home=Accueil
+base.menu.project=Vos Projets
+base.menu.contact=Nous contacter
+base.menu.admin=Administration
+
+# Member menu
+base.menu.welcome=Bienvenue
+base.menu.welcome.visitor=Bienvenue visiteur
+
+base.menu.login=Se connecter
+base.menu.register=S'inscrire
+base.menu.account=Mon compte
+base.menu.logout=Se déconnecter

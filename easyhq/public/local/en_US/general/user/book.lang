@@ -1,0 +1,23 @@
+##################
+# book.lang (US) #
+##################
+
+user.book.menu.contact=Contacts
+user.book.menu.search=Search ...
+
+user.book.contact.title=Manage contact :
+user.book.table.name=Contact Name
+user.book.table.status=Status
+user.book.table.action=Action
+user.book.user.load=Loading contacts ...
+
+user.book.search.title=Search member :
+user.book.search=Your search :
+user.book.search.placeholder=Username...
+user.book.table.mail=E-Mail
+
+# Userbook ajax
+user.book_get.lock=Blocked
+user.book_get.wait=Pending ...
+user.book_get.accept=OK
+user.book_get.user.none=No member available !

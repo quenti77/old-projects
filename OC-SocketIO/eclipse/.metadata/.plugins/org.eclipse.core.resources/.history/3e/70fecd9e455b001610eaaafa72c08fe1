@@ -1,0 +1,185 @@
+package fr.io.block;
+
+import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.Set;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import cpw.mods.fml.common.Optional;
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
+import li.cil.oc.api.machine.Arguments;
+import li.cil.oc.api.machine.Callback;
+import li.cil.oc.api.machine.Context;
+import li.cil.oc.api.network.SimpleComponent;
+import net.minecraft.tileentity.TileEntity;
+
+public class SocketTileEntity extends TileEntity implements SimpleComponent  {
+
+	private Socket socket;
+	private HashMap<String, Object[]> messages;
+	
+	public SocketTileEntity() {
+		this.messages = new HashMap<String, Object[]>();
+	}
+	
+	@Override
+	public String getComponentName() {
+		return "socketio";
+	}
+	
+	@Callback
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] connect(Context context, Arguments args) {
+		boolean result = false;
+		String message = "Missing arguments";
+		
+		if (args.count() == 1) {
+			try {
+				String url = args.checkString(0);
+				
+				this.socket = IO.socket(url);
+				this.socket.connect();
+				
+				result = true;
+				message = url;
+			} catch (Exception e) {
+				//message = "Connection failed to SocketIO";
+				message = e.getMessage();
+			}
+		}
+		
+		return new Object[] {
+			result,
+			message
+		};
+	}
+	
+	@Callback
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] disconnect(Context context, Arguments args) {
+		boolean result = false;
+		
+		if ((Boolean)this.isConnected(context, args)[0]) {
+			this.socket.disconnect();
+		}
+		
+		return new Object[] {
+				result
+		};
+	}
+	
+	@Callback
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] isConnected(Context context, Arguments args) {
+		return new Object[] {
+				(this.socket != null && this.socket instanceof Socket && this.socket.connected())
+		};
+	}
+
+	@Callback
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] emit(Context context, Arguments args) {
+		boolean result = false;
+		String message = "Missing arguments";
+		
+		if (args.count() > 1) {
+			Object[] arguments = new Object[args.count() - 1];
+			for (int i = 1; i < args.count(); i += 1) {
+				arguments[i - 1] = args.checkAny(i);
+			}
+			this.socket.emit(args.checkString(0), arguments, null);
+			
+			result = true;
+			message = "";
+		}
+		
+		return new Object[] {
+				result,
+				message
+		};
+	}
+	
+	public void addOn(String event, Object[] args) {
+		this.messages.put(event, args);
+	}
+	
+	@Callback
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] add(Context context, Arguments args) {
+		if (args.count() == 1 && (Boolean)this.isConnected(context, args)[0]) {
+			final String name = args.checkString(0);
+			this.socket.on(name, new Emitter.Listener() {
+				
+				@Override
+				public void call(Object... args) {
+					addOn(name, args);
+				}
+			});
+		}
+		
+		return null;
+	}
+	
+	@Callback
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] on(Context context, Arguments args) {
+		String event = "";
+		Object[] arguments = null;
+		
+		Set<String> keys = messages.keySet();
+		
+		if (!keys.isEmpty()) {
+			Object first = keys.toArray()[0];
+			System.out.println(first);
+			arguments = messages.get(first);
+			messages.remove(first);
+		}
+		
+		return new Object[] {
+				event,
+				arguments
+		};
+	}
+	
+	@Callback
+	@Optional.Method(modid = "OpenComputers")
+	public Object[] sendTest(Context context, Arguments args) {
+		final Socket socket;
+		try {
+			socket = IO.socket("http://localhost:5000");
+			socket.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
+	
+			  @Override
+			  public void call(Object... args) {
+			    socket.emit("say", "hi");
+			  }
+	
+			}).on("response", new Emitter.Listener() {
+	
+			  @Override
+			  public void call(Object... args) {
+				  System.out.println(args[0]);
+			  }
+	
+			}).on(Socket.EVENT_DISCONNECT, new Emitter.Listener() {
+	
+			  @Override
+			  public void call(Object... args) {}
+	
+			});
+			socket.connect();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return new Object[] {
+				true
+		};
+	}
+	
+}

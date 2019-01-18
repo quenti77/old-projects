@@ -1,0 +1,11 @@
+######################
+# project.lang (US) #
+######################
+
+task.project.error.date=The date is in an invalid format !
+task.project.error.empty=Project does not exist !
+task.project.error.form.missing=You must fill out all required fields !
+
+task.project.success.add=The new project has been successfully created !
+task.project.success.update=The project has been successfully updated !
+task.project.success.delete=The project has successfully been deleted !

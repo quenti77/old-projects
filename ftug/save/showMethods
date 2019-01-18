@@ -1,0 +1,38 @@
+local arg = { ... }
+local sides = { "left, "right", "top", "bottom", "front", "back" }
+local p = nil
+local result = false
+
+local function searchPeripheral()
+  for k, v in pairs(sides) do
+    p = peripheral.wrap(v)
+    
+    if p ~= nil then
+      return true
+    end
+  end
+  
+  return false
+end
+
+-- Loading component
+if arg[1] == nil then
+  result = searchPeripheral()
+else
+  p = peripheral.wrap(arg[1])
+  
+  if p == nil then
+    result = searchPeripheral()
+  end
+end
+
+-- Testing sides
+if not result then
+  print("Aucun peripherique connecte sur les cote du PC !")
+end
+
+-- Show functions
+for k, v in pairs(p) do
+  print(k, ": ", v)
+  os.sleep(0.5)
+end

@@ -1,0 +1,17 @@
+@import "configs";
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 300ms;
+
+    .modal-form {
+        transition: transform 400ms;
+    }
+}
+
+.fade-enter, .fade-leave-active {
+    opacity: 0;
+
+    .modal-form {
+        transform: translateY(-40px);
+    }
+}

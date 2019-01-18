@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit colors="true" stopOnFailure="true" processIsolation="false" bootstrap="phinx.php">
+    <testsuites>
+        <testsuite name="PHQ Test suite">
+            <directory>./tests/PHQ</directory>
+        </testsuite>
+        <testsuite name="App Test suite">
+            <directory>./tests/App</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist proceessUncoveredFromWhitelist="true">
+            <!--<directory suffix=".php">app/</directory>-->
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" target="./public/coverage" />
+    </logging>
+</phpunit>

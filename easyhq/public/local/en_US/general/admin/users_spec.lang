@@ -1,0 +1,13 @@
+########################
+# users_spec.lang (US) #
+########################
+
+admin.users_spec.form.nickname=Username :
+admin.users_spec.form.firstname=First Name :
+admin.users_spec.form.lastname=Family Name :
+admin.users_spec.form.mail=E-Mail :
+admin.users_spec.form.group=Group :
+admin.users_spec.form.avatar=Delete avatar ...
+admin.users_spec.form.update=Modify
+admin.users_spec.form.profil=View profile
+admin.users_spec.form.mail.resend=Resend confirmation e-mail

@@ -1,0 +1,8 @@
+####################
+# forget.lang (US) #
+####################
+
+user.forget.view.title=Forgot password ...
+user.forget.form.mail=E-Mail :
+user.forget.form.mail.placeholder=E-Mail ...
+user.forget.form.resend=Change password

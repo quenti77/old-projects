@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Les options de la page HTML -->
+    <meta charset="utf-8">
+    <meta name="author" content="Quentin Ysambert">
+    <meta name="description"
+          content="Un tchat réalisé en HTML5/CSS3/JS et NodeJS">
+
+    <!-- Pour la partie mobile -->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le titre de la page -->
+    <title>DisQuss</title>
+
+    <!-- Le CSS de font-awesome pour les icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Notre CSS -->
+    <link rel="stylesheet" href="styles/dist/app.css">
+
+    <!-- Seulement pour IE8 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<p class="top-message hidden-form" id="topMessage">
+    Le pseudo ou l'adresse email est déjà pris !
+</p>
+
+<div class="top-container" id="top-container">
+    <form class="top-content" id="connection">
+        <label for="cNickname">Votre pseudo : </label>
+        <input type="text" id="cNickname" placeholder="Pseudo ...">
+        <label for="cPassword">Votre mot de passe : </label>
+        <input type="password" id="cPassword" placeholder="Mot de passe ...">
+        <button type="submit" class="btn">Se connecter</button>
+        <button class="btn btn-primary" id="registerButton">Vient nous voir</button>
+    </form>
+    <form class="top-content hidden-form" id="register">
+        <label for="rNickname">Votre pseudo : </label>
+        <input type="text" id="rNickname" placeholder="Pseudo ...">
+        <label for="rEmail">Votre adresse mail : </label>
+        <input type="email" id="rEmail" placeholder="Adresse mail ...">
+        <label for="rPassword">Votre mot de passe : </label>
+        <input type="password" id="rPassword" placeholder="Mot de passe ...">
+        <button type="submit" class="btn" id="registerFormButton">S'inscrire</button>
+        <button class="btn btn-primary" id="connectionButton">Rejoins-nous</button>
+    </form>
+</div>
+
+<!-- Tout notre contenu -->
+<div class="container">
+    <!-- Cas du premier message -->
+    <div class="content" id="content"></div>
+
+    <div class="content-action">
+        <button class="btn-leave hidden-form" id="btnLeave">
+            <i class="fa fa-sign-out"></i>
+        </button>
+        <input type="text" name="message" id="message" class="input-message"
+               autocomplete="off">
+    </div>
+
+    <!-- barre de navigation à droite -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <!-- Le contenu -->
+            <div class="sidebar-panel" id="sidebar-panel"></div>
+
+            <!-- Nos boutons -->
+            <div class="sidebar-buttons">
+                <!-- Bouton pour voir les utilisateurs -->
+                <a href="/" data-panel="user" class="sidebar-button sidebar-active">
+                    <i class="inline-show-mobile fa fa-user"></i>
+                    <span class="inline-hidden-mobile">Users</span>
+                </a>
+
+                <!-- Bouton pour voir les channels -->
+                <a href="/" data-panel="channel" class="sidebar-button">
+                    <i class="inline-show-mobile fa fa-align-left"></i>
+                    <span class="inline-hidden-mobile">Channels</span>
+                </a>
+
+                <!-- Bouton pour voir le menu (mobile only) -->
+                <a href="/" class="sidebar-button sidebar-menu"
+                   id="sidebar-menu">
+
+                    <i class="inline-show-mobile fa fa-arrow-left"></i>
+                    <span class="inline-hidden-mobile">Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Pour JQuery 2 (simplification du js) -->
+<script src="libs/jquery/jquery.js"></script>
+
+<!-- Pour Mustache (mini templating js) -->
+<script src="libs/mustache/mustache.js"></script>
+
+<script src="http://tchat.haiser.fr:1337/socket.io/socket.io.js"></script>
+
+<!-- Pour la partie visuelle de l'application -->
+<script src="scripts/effect.js"></script>
+
+<!-- Pour la gestion de l'application -->
+<script src="scripts/client.js"></script>
+
+</body>
+</html>

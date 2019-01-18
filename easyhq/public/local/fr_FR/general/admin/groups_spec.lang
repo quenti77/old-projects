@@ -1,0 +1,28 @@
+#########################
+# groups_spec.lang (FR) #
+#########################
+
+admin.groups_spec.form.name=Nom du groupe :
+admin.groups_spec.form.desc=Description :
+
+# Site rights
+admin.groups_spec.form.rights.site=Les droits possible pour le site :
+admin.groups_spec.form.rights.site.connection=Se connecter au site
+admin.groups_spec.form.rights.site.update.own=Modifier son profil
+admin.groups_spec.form.rights.site.update.other=Modifier tous les profils
+admin.groups_spec.form.rights.site.admin.show=Voir l'administration
+admin.groups_spec.form.rights.site.admin.update=Administration partielle
+admin.groups_spec.form.rights.site.admin.complete=Administration complète
+
+# News rights
+admin.groups_spec.form.rights.news=les droits possible pour les news :
+admin.groups_spec.form.rights.news.read=Lire des news
+admin.groups_spec.form.rights.news.comment=Commenter une news
+admin.groups_spec.form.rights.news.write=Gérer ses news
+admin.groups_spec.form.rights.news.update=Gérer d'autre news
+admin.groups_spec.form.rights.news.complete=Tous les droits sur les news
+
+admin.groups_spec.form.add=Ajouter ...
+admin.groups_spec.form.update=Modifier ...
+admin.groups_spec.form.default=Définir comme par défaut
+admin.groups_spec.form.delete=Supprimer le groupe

@@ -1,0 +1,24 @@
+##################
+# user.lang (FR) #
+##################
+
+# Login
+user.error.form.missing=Il faut remplir tous les champs obligatoire !
+user.error.form.login=Vos identifiants ou votre mot de passe sont incorrectes !
+user.error.group.unknown=Vous êtes dans un groupe qui n'existe pas !
+user.error.group.ban=Vous êtes pas autorisé à vous connecter sur le site !
+
+user.success.login=Vous êtes maintenant connecté !
+
+
+# Register
+user.error.form.username=Votre pseudo n'est pas dans un format valide ! (Entre 3 et 40 caractères)
+user.error.form.password=Votre mot de passe n'est pas dans un format valide ! (Minimum 6 caractères)
+user.error.form.password_confirm=Votre confirmation n'est pas identique au mot de passe voulu !
+user.error.form.email=Votre adresse mail n'est pas dans un format correcte ! (abc.xyz@domain.tld)
+user.error.register=Un compte existe déjà avec ces informations !
+
+user.success.register=Votre compte à bien été créé !
+
+# New password
+user.error.mail.unknown=Cette adresse mail n'est pas valide !

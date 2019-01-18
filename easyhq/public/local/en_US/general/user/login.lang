@@ -1,0 +1,19 @@
+###################
+# login.lang (US) #
+###################
+
+user.login.title=Log in
+
+# Forms
+user.login.form.id=identifiant (username or mail) :
+user.login.form.id.placeholder=Username/Mail ...
+
+user.login.form.password=Password :
+user.login.form.password.placeholder=Password ...
+
+user.login.form.remember=Remember Me ...
+
+# Form buttons
+user.login.form.login=Log in ...
+user.login.register=Register ...
+user.login.forget=Forgotten password !

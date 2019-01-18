@@ -1,0 +1,84 @@
+@import "../configs/setting";
+
+@media all and (min-width: 580px) {
+    .tasks {
+
+        .task {
+            margin: 1% 2%;
+            width: 46%;
+        }
+    }
+
+    .error-message {
+        font-size: 32px;
+
+        ul, li {
+            font-size: 24px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 62px;
+        background-color: $primaryColor;
+
+        .navbar-item {
+            display: block;
+            margin: 0 12px;
+
+            font-size: 1.1em;
+        }
+
+        .navbar-logo {
+            display: none;
+        }
+    }
+
+    .header-title {
+        font-size: 3.2em;
+        background-color: transparent;
+
+        img {
+            width: 64px;
+            height: 64px;
+
+            padding-top: 3px;
+            margin: 12px 16px;
+        }
+    }
+
+    .header-subtitle {
+        font-size: 1.6em;
+    }
+
+    .header-description {
+        p {
+            margin: 8px auto;
+            width: 85%;
+        }
+    }
+
+    .section-title {
+        font-size: 3.25vw;
+    }
+
+    .tasks {
+        margin: 0 auto 40px;
+
+        .task {
+            margin: 1% 2%;
+            width: 46%;
+        }
+    }
+
+    .contact-title {
+        font-size: 24px;
+    }
+
+}

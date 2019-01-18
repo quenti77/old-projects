@@ -1,0 +1,19 @@
+###################
+# login.lang (FR) #
+###################
+
+user.login.title=Se connecter
+
+# Forms
+user.login.form.id=Votre identifiant (pseudo ou mail) :
+user.login.form.id.placeholder=Ici votre pseudo ou votre mail ...
+
+user.login.form.password=Votre mot de passe :
+user.login.form.password.placeholder=Ici votre mot de passe ...
+
+user.login.form.remember=Se souvenir de moi ...
+
+# Form buttons
+user.login.form.login=Se connecter ...
+user.login.register=S'inscrire ...
+user.login.forget=J'ai oublier mon mot de passe !

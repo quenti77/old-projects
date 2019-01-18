@@ -1,0 +1,25 @@
+###################
+# title.lang (FR) #
+###################
+
+home.title=Accueil
+
+account.show.title=Mon compte
+account.update.title=Modifier mon compte
+account.reinit.title=Réinitialiser son mot de passe
+
+book.index.title=Mes contacts
+
+error.404.title=Page web introuvable !
+
+user.login.title=Se connecter
+user.register.title=S'inscrire
+user.forget.title=J'ai oublié mon mot de passe
+
+admin.group.title=Gestion des groupes
+admin.home.title=Panneau d'administration
+admin.user.title=Gestion des utilisateurs
+
+task.home.title=Gestion des projets
+task.project.title=Détail du projet
+task.task.title=Détail de la tâche %d

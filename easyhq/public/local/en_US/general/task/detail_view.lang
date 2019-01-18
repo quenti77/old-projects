@@ -1,0 +1,23 @@
+#########################
+# detail_view.lang (US) #
+#########################
+
+task.detail.project=Project Name
+task.detail.percent=Finished Percentage
+task.detail.task.finish=Finished Tasks
+task.detail.table.finish=Done ?
+task.detail.table.name=Tasks Name
+task.detail.table.deadline=Deadline
+task.detail.table.action=Action
+
+task.detail.notask=No Task !
+task.detail.addtask=Add task to the project ...
+task.detail.client.define=Défine client :
+task.detail.task.name=Username
+task.detail.user.load=Loading contacts  ...
+task.detail.member.list=Search members :
+task.detail.search.placeholder=Search ...
+
+task.detail_members.member.none=No member !
+task.detail_user.member.none=No client !
+task.detail_user.client.delete=Delete the current client ...

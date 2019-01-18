@@ -1,0 +1,16 @@
+######################
+# register.lang (US) #
+######################
+
+user.register.form.nickname=Username :
+user.register.form.nickname.placeholder=Username ...
+
+user.register.form.password=Password :
+user.register.form.password.placeholder=Password ...
+
+user.register.form.password.confirm=Confirm password :
+user.register.form.password.confirm.placeholder=Confirm password ...
+
+user.register.form.email=Mail (abc.xyz@domaine.tld) :
+user.register.form.email.placeholder=Mail ...
+user.register.form.submit=Register
