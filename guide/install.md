@@ -115,5 +115,3 @@ server {
 
 Voilà les différentes configurations possible qui couvre les cas les plus utilisés. Si besoin demandé sur github dans les issues \(n'oubliez pas de faire une recherche avant ^^ \)
 
-d
-
